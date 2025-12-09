@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  pos-api:
+    build:
+      context: ./pos-api
+      dockerfile: Dockerfile
+    container_name: pos-api
+    ports:
+      - "8080:8080"

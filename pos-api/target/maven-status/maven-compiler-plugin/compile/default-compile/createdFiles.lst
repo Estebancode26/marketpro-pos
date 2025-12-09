@@ -1,0 +1,11 @@
+com\marketpro\pos\config\OpenApiConfig.class
+com\marketpro\pos\controllers\ProductController.class
+com\marketpro\pos\models\dto\ProductDto.class
+com\marketpro\pos\config\WebSecurityConfig.class
+com\marketpro\pos\models\dto\PaymentDto.class
+com\marketpro\pos\controller\StatusController.class
+com\marketpro\pos\dto\SaleDto.class
+com\marketpro\pos\MarketProPosApplication.class
+com\marketpro\pos\dto\StatusResponse.class
+com\marketpro\pos\services\ProductService.class
+com\marketpro\pos\controllers\PaymentsController.class

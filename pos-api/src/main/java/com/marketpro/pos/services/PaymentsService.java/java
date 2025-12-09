@@ -1,0 +1,13 @@
+package com.marketpro.pos.services;
+
+import com.marketpro.pos.models.Payment;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PaymentsService {
+
+    public Payment register(Payment payment) {
+        payment.setId(UUID.randomUUID().toString());
+        return payment;
+    }
+}

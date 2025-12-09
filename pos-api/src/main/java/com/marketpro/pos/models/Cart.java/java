@@ -1,0 +1,25 @@
+package com.marketpro.pos.models;
+
+import jakarta.persistence.*;
+import java.util.List;
+
+@Entity
+public class Cart {
+    @Id
+    private String id;
+
+    @ElementCollection
+    private List<String> items;
+
+    private boolean checkedOut;
+
+    // Getters y Setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+
+    public List<String> getItems() { return items; }
+    public void setItems(List<String> items) { this.items = items; }
+
+    public boolean isCheckedOut() { return checkedOut; }
+    public void setCheckedOut(boolean checkedOut) { this.checkedOut = checkedOut; }
+}

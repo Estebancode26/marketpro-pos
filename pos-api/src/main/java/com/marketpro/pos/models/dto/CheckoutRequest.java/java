@@ -1,0 +1,14 @@
+package com.marketpro.pos.models.dto;
+
+import com.marketpro.pos.models.Payment;
+
+public class CheckoutRequest {
+    private String customerId;
+    private Payment payment;
+
+    public String getCustomerId() { return customerId; }
+    public void setCustomerId(String customerId) { this.customerId = customerId; }
+
+    public Payment getPayment() { return payment; }
+    public void setPayment(Payment payment) { this.payment = payment; }
+}

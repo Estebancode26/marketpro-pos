@@ -1,0 +1,26 @@
+package com.marketpro.pos.controllers;
+
+import com.marketpro.pos.models.Cart;
+import com.marketpro.pos.models.Sale;
+import com.marketpro.pos.models.dto.CheckoutRequest;
+import com.marketpro.pos.models.dto.ItemsRequest;
+import com.marketpro.pos.services.CartService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RequestMapping("/api/carrito")
+@Tag(name = "Carrito", description = "Gestión de carrito de compras")
+public class CartController {
+
+    @PostMapping
+    @Operation(summary = "Crear carrito")
+    public ResponseEntity<CartDto> createCart()
+
+    @PutMapping("/{id}/items")
+    @Operation(summary = "Agregar ítems al carrito")
+    public ResponseEntity<CartDto> addItems(@PathVariable String id, @Valid @RequestBody ItemsRequest request)
+
+    @PostMapping("/{id}/checkout")
+    @Operation(summary = "Finalizar compra")
+    public ResponseEntity<SaleDto> checkout(@PathVariable String id, @Valid @RequestBody CheckoutRequest request)

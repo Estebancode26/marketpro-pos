@@ -1,0 +1,20 @@
+openapi: 3.0.0
+info:
+  title: MarketPro POS API
+  version: 1.0.0
+paths:
+  /pos/cart:
+    post:
+      summary: Crear carrito
+  /pos/cart/{id}/items:
+    put:
+      summary: Agregar ítems al carrito
+  /pos/cart/{id}/checkout:
+    post:
+      summary: Realizar checkout
+  /pos/sales/{id}:
+    get:
+      summary: Consultar venta
+  /pos/payments:
+    post:
+      summary: Registrar pago

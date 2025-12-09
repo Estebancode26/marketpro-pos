@@ -1,0 +1,17 @@
+package com.marketpro.pos.services;
+
+import com.marketpro.pos.models.Sale;
+import org.springframework.stereotype.Service;
+
+@Service
+public class SalesService {
+
+    public Sale getSale(String id) {
+        Sale sale = new Sale();
+        sale.setId(id);
+        sale.setCartId("cart123");
+        sale.setCustomerId("customer456");
+        sale.setTotal(100.0);
+        return sale;
+    }
+}

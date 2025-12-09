@@ -1,0 +1,37 @@
+package com.marketpro.pos.services;
+
+import com.marketpro.pos.models.Cart;
+import com.marketpro.pos.models.Sale;
+import com.marketpro.pos.models.dto.CheckoutRequest;
+import com.marketpro.pos.models.dto.ItemsRequest;
+import org.springframework.stereotype.Service;
+
+import java.util.UUID;
+
+@Service
+public class CartService {
+
+    public Cart createCart() {
+        Cart cart = new Cart();
+        cart.setId(UUID.randomUUID().toString());
+        cart.setCheckedOut(false);
+        cart.setItems(new ArrayList<>());
+        return cart;
+    }
+
+    public Cart addItems(String id, ItemsRequest request) {
+        Cart cart = new Cart(); // Simulación
+        cart.setId(id);
+        cart.setItems(request.getItems());
+        return cart;
+    }
+
+    public Sale checkout(String id, CheckoutRequest request) {
+        Sale sale = new Sale();
+        sale.setId(UUID.randomUUID().toString());
+        sale.setCartId(id);
+        sale.setCustomerId(request.getCustomerId());
+        sale.setTotal(request.getPayment().getAmount());
+        return sale;
+    }
+}

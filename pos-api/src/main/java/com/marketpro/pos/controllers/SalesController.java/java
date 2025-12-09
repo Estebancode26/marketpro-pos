@@ -1,0 +1,15 @@
+package com.marketpro.pos.controllers;
+
+import com.marketpro.pos.models.Sale;
+import com.marketpro.pos.services.SalesService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RequestMapping("/api/ventas")
+@Tag(name = "Ventas", description = "Consulta de ventas")
+public class SalesController {
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Obtener venta por ID")
+    public ResponseEntity<SaleDto> getSale(@PathVariable String id)
