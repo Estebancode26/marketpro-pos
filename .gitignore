@@ -1,0 +1,13 @@
+# Maven
+target/
+*.log
+
+# VSCode
+.vscode/
+
+# Sistema
+*.class
+*.DS_Store
+
+# Docker
+*.pid
