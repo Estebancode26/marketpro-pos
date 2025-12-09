@@ -22,6 +22,7 @@ jobs:
           cache: 'maven'
 
       - name: Compilar con Maven
+        working-directory: pos-api
         run: mvn -B clean package
 
       - name: Subir JAR como artifact
