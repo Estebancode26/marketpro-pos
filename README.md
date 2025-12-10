@@ -34,16 +34,9 @@ Disponible en: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swa
 ---
 
 ##  Endpoints 
-| Método | Ruta              | Descripción             |
-|--------|-------------------|-------------------------|
-| GET    | /api/products     | Listar productos        |
-| POST   | /api/products     | Crear producto          |
-| PUT    | /api/products/{id}| Actualizar producto     |
-| DELETE | /api/products/{id}| Eliminar producto       |
-| POST   | /api/sales        | Registrar venta         |
-| GET    | /api/sales        | Listar ventas           |
-| POST   | /api/returns      | Registrar devolución    |
-| GET    | /api/status       | Estado del sistema      |
+- GET /api/pagos → Listar pagos registrados.
+- POST /api/pagos → Registrar un nuevo pago.
+- 
 
 ---
 
